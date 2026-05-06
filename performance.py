@@ -201,7 +201,7 @@ def compute_market_metrics(
     equity: pd.Series,
     risk_free_rate:   float = RISK_FREE_RATE,
     benchmark_ticker: str   = BENCHMARK_TICKER,
-    benchmark_returns: pd.Series | None = None,
+    benchmark_returns: Optional[pd.Series] = None,
 ) -> dict:
     """
     Compute Alpha, Beta, and related metrics vs. a market benchmark.
@@ -301,7 +301,7 @@ def evaluate(
     equity: pd.Series,
     risk_free_rate:   float = RISK_FREE_RATE,
     benchmark_ticker: str   = BENCHMARK_TICKER,
-    benchmark_returns: pd.Series | None = None,
+    benchmark_returns: Optional[pd.Series] = None,
 ) -> dict:
     """
     Compute the full set of performance metrics and return them as one dict.

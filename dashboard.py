@@ -127,7 +127,7 @@ def load_pipeline(
 if fast_window >= slow_window:
     st.error("Please set the fast SMA window to be shorter than the slow SMA window.")
     st.stop()
-
+st.info("⏳ Fetching market data and running the pipeline — this takes about 30 seconds on first load. Subsequent changes are instant thanks to caching.")
 with st.spinner("Running pipeline — fetching data, generating signals, simulating…"):
     try:
         signals, ledger, trade_log, benchmark, metrics = load_pipeline(
